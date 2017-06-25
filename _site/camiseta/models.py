@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class Camiseta(models.Model):
+    marca   = models.CharField(max_length=20)
+    tamanho = models.CharField(max_length=10)
+    cor     = models.CharField(max_length=10)
+    tecido  = models.CharField(max_length=30)   
+    preco   = models.FloatField()
