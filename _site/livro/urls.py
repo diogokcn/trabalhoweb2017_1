@@ -9,4 +9,13 @@ urlpatterns = [
 
     # /livro/<id>/
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
+
+    # /livro/add
+    url(r'^add/$', views.LivroCreate.as_view(), name='livro-add'),
+
+    # /livro/add/<id>/
+    url(r'^/add/(?P<pk>[0-9]+)/$', views.LivroUpdate.as_view(), name='livro-update'),
+
+    #/livro/<id>/delete/
+    url(r'(?P<pk>[0-9]+)/delete/$', views.LivroDelete.as_view(), name='livro-delete'),
 ]
