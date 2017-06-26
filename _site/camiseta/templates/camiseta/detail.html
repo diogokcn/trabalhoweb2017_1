@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+{% block title %} Detalhes {% endblock %}
+
+{% block body %}
+	<ul>
+		<li> Marca:   {{camiseta.marca}}  </li>
+		<li> Tamanho: {{camiseta.tamanho}}</li>
+		<li> Cor: 	  {{camiseta.cor}}    </li>
+		<li> Tecido:  {{camiseta.tecido}} </li>
+		<li> Preco: R${{camiseta.preco}}  </li>
+	</ul>
+{% endblock %}

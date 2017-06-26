@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+{% block title %} DVDs {% endblock %}
+
+{% block body %}
+	{% if all_dvd %}
+	<h2> Lista de DVDs </h2>
+	<u1>
+	    {% for dvd in all_dvd %}
+		    <li>
+		    	<a href="/dvd/{{ dvd.id }}/"> {{ dvd.titulo }} </a>
+		    </li>
+	    {% endfor %}
+	</u1>
+	{% endif %}
+{% endblock %}

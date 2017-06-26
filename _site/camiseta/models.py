@@ -6,3 +6,6 @@ class Camiseta(models.Model):
     cor     = models.CharField(max_length=10)
     tecido  = models.CharField(max_length=30)   
     preco   = models.FloatField()
+
+    def __str__(self):
+        return self.marca + ', ' + self.tamanho + ', ' + self.cor + ', ' + self.tecido

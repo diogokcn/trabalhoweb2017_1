@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+{% block title %} Camisetas {% endblock %}
+
+{% block body %}
+	{% if all_camiseta %}
+	<h2> Lista de camisetas </h2>
+	<u1>
+	    {% for camiseta in all_camiseta %}
+	    	<li>
+	    		<a href="/camiseta/{{ camiseta.id }}/"> {{ camiseta.marca }} </a>
+	    	</li>
+	    {% endfor %}
+	</u1>
+	{% endif %}
+{% endblock %}

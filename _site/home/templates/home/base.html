@@ -12,19 +12,32 @@
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			
+			<!-- Home Link -->
 			<div class="navbar-header">
-				<a class="navbar-brand" href="{% url 'home:index' %}"> Home </a>
+				<a class="navbar-brand" href="{% url 'home:index' %}"><b> Home </b></a>
 			</div>
 
 			<!-- Itens -->
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
+					<!-- Livros -->
 					<li class="">
-						<a href="{% url 'livro:index' %}"> Livro </a>
+						<a href="{% url 'livro:index' %}"> Livros </a>
 					</li>
-					
+
+					<!-- Jogos Eletrônicos -->
 					<li class="">
 						<a href="#"> Jogos </a>
+					</li>
+
+					<!-- Camisetas -->
+					<li class="">
+						<a href="{% url 'camiseta:index' %}"> Camisetas </a>
+					</li>
+
+					<!-- DVDs -->
+					<li class="">
+						<a href="{% url 'dvd:index' %}"> DVDs </a>
 					</li>
 				</ul>
 
@@ -44,5 +57,4 @@
 {% block body %}
 {% endblock %}
 </body>
-
 </html>

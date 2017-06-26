@@ -6,3 +6,8 @@ class DVD(models.Model):
     ano     = models.IntegerField()
     duracao = models.IntegerField()
     preco   = models.FloatField()
+
+    def __str__(self):
+        ano = str(self.ano)  
+        duracao = str(self.duracao)
+        return self.titulo + ', ' + self.genero + ', ' + ano + ', ' + duracao

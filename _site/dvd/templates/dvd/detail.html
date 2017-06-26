@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+{% block title %} Detalhes {% endblock %}
+
+{% block body %}
+	<h2>Titulo: {{dvd.titulo}}</h2>
+	<ul>
+		<li> Genero:  {{dvd.genero}} </li>
+		<li> Ano: 	  {{dvd.ano}}    </li>
+		<li> Duracao: {{dvd.duracao}}</li>
+		<li> Preco: R${{dvd.preco}}  </li>
+	</ul>
+{% endblock %}
