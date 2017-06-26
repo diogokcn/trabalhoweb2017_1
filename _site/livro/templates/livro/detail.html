@@ -1,0 +1,14 @@
+{% extends 'home/base.html' %}
+{% block title %} Detalhes {% endblock %}
+
+{% block body %}
+	<h2>Titulo: {{livro.titulo}}</h2>
+	<ul>
+		<li> Editora: {{livro.editora}} </li>
+		<li> Ano: {{livro.ano}} </li>
+		<li> Autora: {{livro.autora}}</li>
+		<li> Nro Paginas: {{livro.nroPags}} </li>
+		<li> Formato: {{livro.formato}}</li>
+		<li> Preco: R${{livro.preco}}</li>
+	</ul>
+{% endblock %}
