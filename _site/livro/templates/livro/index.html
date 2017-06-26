@@ -1,5 +1,10 @@
+{% extends 'home/base.html' %}
+{% block title %} livros {% endblock %}
+
+{% block body %}
 <u1>
     {% for livro in todos_livros %}
     <li><a href="/livro/{{ livro.id }}/">{{ livro.titulo }}</a></li>
     {% endfor %}
 </u1>
+{% endblock %}

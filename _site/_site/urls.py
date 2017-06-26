@@ -19,8 +19,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/',          include(admin.site.urls)),
-    url(r'^livro/',          include('livro.urls')),
-    url(r'^camiseta/',       include('camiseta.urls')),
-    url(r'^dvd/',            include('dvd.urls')),
-    url(r'^jogoeletronico/', include('jogo_eletronico.urls')),
+    url(r'^home/',           include('home.urls', namespace='home')),
+    url(r'^livro/',          include('livro.urls', namespace='livro')),
+    url(r'^camiseta/',       include('camiseta.urls', namespace='camiseta')),
+    url(r'^dvd/',            include('dvd.urls', namespace='dvd')),
+    url(r'^jogoeletronico/', include('jogo_eletronico.urls', namespace='jogo')),
 ]
