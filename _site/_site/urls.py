@@ -19,7 +19,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/',          include(admin.site.urls)),
+    url(r'^accounts/',       include('django.contrib.auth.urls')),
     url(r'^home/',           include('home.urls', namespace='home')),
+    url(r'^user/',          include('user.urls', namespace='user')),
     url(r'^livro/',          include('livro.urls', namespace='livro')),
     url(r'^camiseta/',       include('camiseta.urls', namespace='camiseta')),
     url(r'^dvd/',            include('dvd.urls', namespace='dvd')),
