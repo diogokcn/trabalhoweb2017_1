@@ -27,7 +27,7 @@
 
 					<!-- Jogos Eletrônicos -->
 					<li class="">
-						<a href="#"> Jogos </a>
+						<a href="{% url 'jogo:index' %}"> Jogos </a>
 					</li>
 
 					<!-- Camisetas -->
@@ -44,6 +44,9 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li class="">
 						<a href="{% url 'livro:livro-add' %}"> Add Livro </a>
+					</li>
+					<li class="">
+						<a href="{% url 'jogo:jogo-add' %}"> Add Jogo </a>
 					</li>
 					<!--
 					<li class="">

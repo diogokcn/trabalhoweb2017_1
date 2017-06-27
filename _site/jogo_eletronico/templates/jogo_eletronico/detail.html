@@ -1,0 +1,13 @@
+{% extends 'home/base.html' %}
+{% block title %} Detalhes Jogo {% endblock %}
+
+{% block body %}
+	<h2>Titulo: {{jogoeletronico.titulo}}</h2>
+	<ul>
+		<li> Estudio: {{jogoeletronico.estudio}} </li>
+		<li> Distribuidor: {{jogoeletronico.distribuidor}} </li>
+		<li> Genero: {{jogoeletronico.genero}}</li>
+		<li> Ano: {{jogoeletronico.ano}} </li>
+		<li> Preco: R${{jogoeletronico.preco}}</li>
+	</ul>
+{% endblock %}

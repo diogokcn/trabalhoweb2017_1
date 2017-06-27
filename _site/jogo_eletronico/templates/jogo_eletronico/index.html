@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+{% block title %} jogos {% endblock %}
+
+{% block body %}
+	{% if all_jogos %}
+	<h2> Jogos: </h2>
+	<u1>
+	    {% for jogo in all_jogos %}
+	    <li><a href="{% url 'jogo:detail' jogo.id %}">{{ jogo.titulo }}</a></li>
+	 
+	 	<!-- Delete -->
+		<form action="{% url 'jogo:jogo-delete' jogo.id %}" method="POST" style="display: inline;">
+			{% csrf_token %}
+			<input type="hidden" name="jogo_id" value="{{ jogo.id }}"/>
+			<button type="submit" class="btn btn-default btn-sm"> Excluir </button>
+		</form>
+
+		{% endfor %}
+	</u1>
+	{% else %}
+		<h2> Não há Jogos</h2>
+	{% endif %}
+{% endblock %}
