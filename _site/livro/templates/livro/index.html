@@ -3,7 +3,7 @@
 
 {% block body %}
 	{% if all_livro %}
-	<h2> Livros: </h2>
+	<h2> Lista de livros </h2>
 	<u1>
 	    {% for livro in all_livro %}
 	    <li><a href="{% url 'livro:detail' livro.id %}">{{ livro.titulo }}</a></li>

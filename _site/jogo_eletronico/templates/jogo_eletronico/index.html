@@ -3,7 +3,7 @@
 
 {% block body %}
 	{% if all_jogos %}
-	<h2> Jogos: </h2>
+	<h2> Lista de jogos </h2>
 	<u1>
 	    {% for jogo in all_jogos %}
 	    <li><a href="{% url 'jogo:detail' jogo.id %}">{{ jogo.titulo }}</a></li>

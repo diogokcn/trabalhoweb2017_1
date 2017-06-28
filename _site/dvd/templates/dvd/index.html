@@ -1,15 +1,23 @@
 {% extends 'home/base.html' %}
-{% block title %} DVDs {% endblock %}
+{% block title %} DVD {% endblock %}
 
 {% block body %}
 	{% if all_dvd %}
-	<h2> Lista de DVDs </h2>
-	<u1>
-	    {% for dvd in all_dvd %}
-		    <li>
-		    	<a href="/dvd/{{ dvd.id }}/"> {{ dvd.titulo }} </a>
-		    </li>
-	    {% endfor %}
-	</u1>
+	<h2> Lista de DVD's </h2>
+		<u1>
+		    {% for dvd in all_dvd %}
+		    <li><a href="{% url 'dvd:detail' dvd.id %}">{{ dvd.titulo }}</a></li>
+		 
+		 	<!-- Delete -->
+			<form action="{% url 'dvd:dvd-delete' dvd.id %}" method="POST" style="display: inline;">
+				{% csrf_token %}
+				<input type="hidden" name="dvd_id" value="{{ dvd.id }}"/>
+				<button type="submit" class="btn btn-default btn-sm"> Excluir </button>
+			</form>
+
+			{% endfor %}
+		</u1>
+	{% else %}
+		<h2> Não há DVD's </h2>
 	{% endif %}
 {% endblock %}
