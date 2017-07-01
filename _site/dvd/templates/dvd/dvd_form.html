@@ -1,5 +1,6 @@
 {% extends 'home/base.html' %}
-{% block title %} Adicionar DVD {% endblock %}
+{% load i18n %}
+{% block title %} {% trans "Adicionar DVD" %} {% endblock %}
 
 {% block body %}
 	<form class="form-horizontal" action="" method="POST" >
@@ -7,7 +8,7 @@
 		{% include 'home/form-template.html' %}
 		<div class="form-group">
 			<div class="col-sm-offset-2">
-				<button type="submit" class="btn btn-sucess">Submit</button>
+				<button type="submit" class="btn btn-sucess"> {% trans "Submeter" %} </button>
 			</div>
 		</div>
 	</form> 

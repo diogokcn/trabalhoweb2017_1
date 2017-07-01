@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
+from django.utils.translation import ugettext_lazy
 from .models import Camiseta
 
 class IndexView(generic.ListView):

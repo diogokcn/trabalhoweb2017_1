@@ -1,12 +1,13 @@
 {% extends 'home/base.html' %}
-{% block title %} Detalhes {% endblock %}
+{% load i18n %}
+{% block title %} {% trans "Detalhes" %} {% endblock %}
 
 {% block body %}
-	<h2>Titulo: {{dvd.titulo}}</h2>
+	<h2> {% trans "Título" %}: {{dvd.titulo}}</h2>
 	<ul>
-		<li> Genero:  {{dvd.genero}} </li>
-		<li> Ano: 	  {{dvd.ano}}    </li>
-		<li> Duracao: {{dvd.duracao}}</li>
-		<li> Preco: R${{dvd.preco}}  </li>
+		<li> {% trans "Gênero" %}:  {{dvd.genero}} </li>
+		<li> {% trans "Ano" %}: 	{{dvd.ano}}    </li>
+		<li> {% trans "Duração" %}: {{dvd.duracao}}</li>
+		<li> {% trans "Preço" %}: R${{dvd.preco}}  </li>
 	</ul>
 {% endblock %}

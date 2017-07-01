@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-01 19:59-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: _site/settings.py:102
+msgid "English"
+msgstr ""
+
+#: _site/settings.py:103
+msgid "Portugues Brasileiro"
+msgstr "Brazilian Portuguese"
+
+#: camiseta/templates/camiseta/camiseta_form.html:3
+#, fuzzy
+#| msgid "Add Camiseta"
+msgid "Adicionar Camiseta"
+msgstr "Add T-Shirt"
+
+#: camiseta/templates/camiseta/camiseta_form.html:11
+#: dvd/templates/dvd/dvd_form.html:11
+msgid "Submeter"
+msgstr "Submit"
+
+#: camiseta/templates/camiseta/detail.html:3 dvd/templates/dvd/detail.html:3
+msgid "Detalhes"
+msgstr "Details"
+
+#: camiseta/templates/camiseta/detail.html:7
+msgid "Marca"
+msgstr "Brand"
+
+#: camiseta/templates/camiseta/detail.html:8
+msgid "Tamanho"
+msgstr "Size"
+
+#: camiseta/templates/camiseta/detail.html:9
+msgid "Cor"
+msgstr "Color"
+
+#: camiseta/templates/camiseta/detail.html:10
+msgid "Tecido"
+msgstr "Fabric"
+
+#: camiseta/templates/camiseta/detail.html:11 dvd/templates/dvd/detail.html:11
+msgid "Preço"
+msgstr "Price"
+
+#: camiseta/templates/camiseta/index.html:3 home/templates/home/base.html:37
+msgid "Camisetas"
+msgstr "T-Shirts"
+
+#: camiseta/templates/camiseta/index.html:7
+msgid "Lista de camisetas"
+msgstr "T-Shirts List"
+
+#: camiseta/templates/camiseta/index.html:16 dvd/templates/dvd/index.html:16
+msgid "Excluir"
+msgstr "Delete"
+
+#: camiseta/templates/camiseta/index.html:22
+msgid "Não há camisetas"
+msgstr "No T-Shirts availables"
+
+#: dvd/templates/dvd/detail.html:6
+msgid "Título"
+msgstr "Title"
+
+#: dvd/templates/dvd/detail.html:8
+msgid "Gênero"
+msgstr "Genre"
+
+#: dvd/templates/dvd/detail.html:9
+msgid "Ano"
+msgstr "Year"
+
+#: dvd/templates/dvd/detail.html:10
+msgid "Duração"
+msgstr "Duration"
+
+#: dvd/templates/dvd/dvd_form.html:3
+msgid "Adicionar DVD"
+msgstr "Add DVD"
+
+#: dvd/templates/dvd/index.html:7
+msgid "Lista de DVD's"
+msgstr "DVDs List"
+
+#: dvd/templates/dvd/index.html:22
+msgid "Não há DVD's"
+msgstr "No DVDs availables"
+
+#: home/templates/home/base.html:27
+msgid "Livros"
+msgstr "Books"
+
+#: home/templates/home/base.html:32
+msgid "Jogos"
+msgstr "Games"
+
+#: home/templates/home/base.html:49
+msgid "Add Livro"
+msgstr "Add Book"
+
+#: home/templates/home/base.html:54
+msgid "Add Jogo"
+msgstr "Add Game"
+
+#: home/templates/home/base.html:59
+msgid "Add Camiseta"
+msgstr "Add T-Shirt"

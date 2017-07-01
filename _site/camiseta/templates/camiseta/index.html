@@ -1,9 +1,10 @@
 {% extends 'home/base.html' %}
-{% block title %} Camisetas {% endblock %}
+{% load i18n %}
+{% block title %} {% trans "Camisetas" %} {% endblock %}
 
 {% block body %}
 	{% if all_camiseta %}
-	<h2> Lista de camisetas </h2>
+	<h2> {% trans "Lista de camisetas" %} </h2>
 		<u1>
 		    {% for camiseta in all_camiseta %}
 		    <li><a href="{% url 'camiseta:detail' camiseta.id %}">{{ camiseta.marca }}</a></li>
@@ -12,12 +13,12 @@
 			<form action="{% url 'camiseta:camiseta-delete' camiseta.id %}" method="POST" style="display: inline;">
 				{% csrf_token %}
 				<input type="hidden" name="camiseta_id" value="{{ camiseta.id }}"/>
-				<button type="submit" class="btn btn-default btn-sm"> Excluir </button>
+				<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
 			</form>
 
 			{% endfor %}
 		</u1>
 	{% else %}
-		<h2> Não há camisetas </h2>
+		<h2> {% trans "Não há camisetas" %} </h2>
 	{% endif %}
 {% endblock %}

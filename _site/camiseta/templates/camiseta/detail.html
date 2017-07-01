@@ -1,12 +1,13 @@
 {% extends 'home/base.html' %}
-{% block title %} Detalhes {% endblock %}
+{% load i18n %}
+{% block title %} {% trans "Detalhes" %} {% endblock %}
 
 {% block body %}
 	<ul>
-		<li> Marca:   {{camiseta.marca}}  </li>
-		<li> Tamanho: {{camiseta.tamanho}}</li>
-		<li> Cor: 	  {{camiseta.cor}}    </li>
-		<li> Tecido:  {{camiseta.tecido}} </li>
-		<li> Preco: R${{camiseta.preco}}  </li>
+		<li> {% trans "Marca" %}:   {{camiseta.marca}}  </li>
+		<li> {% trans "Tamanho" %}: {{camiseta.tamanho}}</li>
+		<li> {% trans "Cor" %}: 	{{camiseta.cor}}    </li>
+		<li> {% trans "Tecido" %}:  {{camiseta.tecido}} </li>
+		<li> {% trans "Preço" %}: R${{camiseta.preco}}  </li>
 	</ul>
 {% endblock %}

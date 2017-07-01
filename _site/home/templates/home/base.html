@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="en">
 <head>
-	<title>{% block title %}Homepage{% endblock %}</title>
+	<title>{% block title %} Homepage {% endblock %}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
@@ -22,17 +24,17 @@
 				<ul class="nav navbar-nav">
 					<!-- Livros -->
 					<li class="">
-						<a href="{% url 'livro:index' %}"> Livros </a>
+						<a href="{% url 'livro:index' %}"> {% trans "Livros" %}</a>
 					</li>
 
 					<!-- Jogos Eletrônicos -->
 					<li class="">
-						<a href="{% url 'jogo:index' %}"> Jogos </a>
+						<a href="{% url 'jogo:index' %}"> {% trans "Jogos" %}</a>
 					</li>
 
 					<!-- Camisetas -->
 					<li class="">
-						<a href="{% url 'camiseta:index' %}"> Camisetas </a>
+						<a href="{% url 'camiseta:index' %}"> {% trans "Camisetas" %}</a>
 					</li>
 
 					<!-- DVDs -->
@@ -44,17 +46,17 @@
 				<ul class="nav navbar-nav navbar-right">
 					<!-- Livro -->
 					<li class="">
-						<a href="{% url 'livro:livro-add' %}"> Add Livro </a>
+						<a href="{% url 'livro:livro-add' %}"> {% trans "Add Livro" %} </a>
 					</li>
 
 					<!-- Jogo -->
 					<li class="">
-						<a href="{% url 'jogo:jogo-add' %}"> Add Jogo </a>
+						<a href="{% url 'jogo:jogo-add' %}"> {% trans "Add Jogo" %} </a>
 					</li>
 
 					<!-- Camiseta -->
 					<li class="">
-						<a href="{% url 'camiseta:camiseta-add' %}"> Add Camiseta </a>
+						<a href="{% url 'camiseta:camiseta-add' %}"> {% trans "Add Camiseta" %} </a>
 					</li>
 
 					<!-- DVD -->
