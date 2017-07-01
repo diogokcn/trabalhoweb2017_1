@@ -1,0 +1,7 @@
+
+Falta fazer:
+    - Internacionalização para Jogos e Livros;
+    - Internacionalização dos formulários de adicionar;
+    - 1 funcionalidade para cada membro do grupo;
+    - Documento do sistema (casos de uso, classes, etc)
+        
