@@ -64,11 +64,27 @@
 						<a href="{% url 'dvd:dvd-add' %}"> Add DVD </a>
 					</li>
 
-					<!--
-					<li class="">
-						<p> Logged: {{user.username}}</p>
+					<!-- Se usuario nao estiver logado, aparecer a opcao de login -->
+					{% if not request.user.is_authenticated %}
+					<!-- Cadastrar usuario -->
+					<li>
+						<a href="{% url 'user:register' %}"> Cadastre </a>
 					</li>
-					-->
+
+					<!-- Logar usuario -->
+					<li>
+						<a href="{% url 'login' %}"> Login </a>
+					</li>
+					{% endif %}
+
+					<!-- Se usuario estiver logado, aparecer a opcao de logout -->
+					{% if request.user.is_authenticated %}
+					<li>
+						<a href="{% url 'logout' %}"> Welcome: {{user.username}}<br> Logout </a>
+					</li>
+					{% endif %}
+					
+					
 				</ul>
 			</div>
 		</div>

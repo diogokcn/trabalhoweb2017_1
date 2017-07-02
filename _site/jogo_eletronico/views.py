@@ -17,7 +17,6 @@ class DetailView(generic.DetailView):
 	model = JogoEletronico
 	template_name = 'jogo_eletronico/detail.html'
 
-
 class JogoCreate(CreateView):
 	model = JogoEletronico
 	fields = ['titulo', 'estudio', 'distribuidor',
