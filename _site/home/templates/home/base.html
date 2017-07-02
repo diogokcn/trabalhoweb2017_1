@@ -46,29 +46,29 @@
 				<ul class="nav navbar-nav navbar-right">
 					<!-- Livro -->
 					<li class="">
-						<a href="{% url 'livro:livro-add' %}"> {% trans "Add Livro" %} </a>
+						<a href="{% url 'livro:livro-add' %}"> {% trans "Adicionar Livro" %} </a>
 					</li>
 
 					<!-- Jogo -->
 					<li class="">
-						<a href="{% url 'jogo:jogo-add' %}"> {% trans "Add Jogo" %} </a>
+						<a href="{% url 'jogo:jogo-add' %}"> {% trans "Adicionar Jogo" %} </a>
 					</li>
 
 					<!-- Camiseta -->
 					<li class="">
-						<a href="{% url 'camiseta:camiseta-add' %}"> {% trans "Add Camiseta" %} </a>
+						<a href="{% url 'camiseta:camiseta-add' %}"> {% trans "Adicionar Camiseta" %} </a>
 					</li>
 
 					<!-- DVD -->
 					<li class="">
-						<a href="{% url 'dvd:dvd-add' %}"> Add DVD </a>
+						<a href="{% url 'dvd:dvd-add' %}"> {% trans "Adicionar" %} DVD </a>
 					</li>
 
 					<!-- Se usuario nao estiver logado, aparecer a opcao de login -->
 					{% if not request.user.is_authenticated %}
 					<!-- Cadastrar usuario -->
 					<li>
-						<a href="{% url 'user:register' %}"> Cadastre </a>
+						<a href="{% url 'user:register' %}"> {% trans "Cadastre" %} </a>
 					</li>
 
 					<!-- Logar usuario -->

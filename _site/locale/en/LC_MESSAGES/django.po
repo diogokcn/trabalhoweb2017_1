@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-01 19:59-0300\n"
+"POT-Creation-Date: 2017-07-02 20:19-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,13 +26,15 @@ msgid "Portugues Brasileiro"
 msgstr "Brazilian Portuguese"
 
 #: camiseta/templates/camiseta/camiseta_form.html:3
-#, fuzzy
-#| msgid "Add Camiseta"
+#: home/templates/home/base.html:59
 msgid "Adicionar Camiseta"
-msgstr "Add T-Shirt"
+msgstr "Add T-shirt"
 
 #: camiseta/templates/camiseta/camiseta_form.html:11
 #: dvd/templates/dvd/dvd_form.html:11
+#: jogo_eletronico/templates/jogo_eletronico/jogoeletronico_form.html:11
+#: livro/templates/livro/livro_form.html:11
+#: user/templates/registration/registration_form.html:11
 msgid "Submeter"
 msgstr "Submit"
 
@@ -40,51 +42,64 @@ msgstr "Submit"
 msgid "Detalhes"
 msgstr "Details"
 
-#: camiseta/templates/camiseta/detail.html:7
+#: camiseta/templates/camiseta/detail.html:6
+msgid "Camiseta"
+msgstr "T-Shirt"
+
+#: camiseta/templates/camiseta/detail.html:8
 msgid "Marca"
 msgstr "Brand"
 
-#: camiseta/templates/camiseta/detail.html:8
+#: camiseta/templates/camiseta/detail.html:9
 msgid "Tamanho"
 msgstr "Size"
 
-#: camiseta/templates/camiseta/detail.html:9
+#: camiseta/templates/camiseta/detail.html:10
 msgid "Cor"
 msgstr "Color"
 
-#: camiseta/templates/camiseta/detail.html:10
+#: camiseta/templates/camiseta/detail.html:11
 msgid "Tecido"
 msgstr "Fabric"
 
-#: camiseta/templates/camiseta/detail.html:11 dvd/templates/dvd/detail.html:11
+#: camiseta/templates/camiseta/detail.html:12 dvd/templates/dvd/detail.html:11
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:12
+#: livro/templates/livro/detail.html:13
 msgid "Preço"
 msgstr "Price"
 
 #: camiseta/templates/camiseta/index.html:3 home/templates/home/base.html:37
 msgid "Camisetas"
-msgstr "T-Shirts"
+msgstr "T-shirts"
 
 #: camiseta/templates/camiseta/index.html:7
 msgid "Lista de camisetas"
-msgstr "T-Shirts List"
+msgstr "T-shirts List"
 
 #: camiseta/templates/camiseta/index.html:16 dvd/templates/dvd/index.html:16
+#: jogo_eletronico/templates/jogo_eletronico/index.html:16
+#: livro/templates/livro/index.html:16
 msgid "Excluir"
 msgstr "Delete"
 
 #: camiseta/templates/camiseta/index.html:22
 msgid "Não há camisetas"
-msgstr "No T-Shirts availables"
+msgstr "No T-shirts availables"
 
 #: dvd/templates/dvd/detail.html:6
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:6
+#: livro/templates/livro/detail.html:6
 msgid "Título"
 msgstr "Title"
 
 #: dvd/templates/dvd/detail.html:8
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:10
 msgid "Gênero"
 msgstr "Genre"
 
 #: dvd/templates/dvd/detail.html:9
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:11
+#: livro/templates/livro/detail.html:9
 msgid "Ano"
 msgstr "Year"
 
@@ -97,29 +112,111 @@ msgid "Adicionar DVD"
 msgstr "Add DVD"
 
 #: dvd/templates/dvd/index.html:7
-msgid "Lista de DVD's"
+msgid "Lista de DVDs"
 msgstr "DVDs List"
 
 #: dvd/templates/dvd/index.html:22
-msgid "Não há DVD's"
+msgid "Não há DVDs"
 msgstr "No DVDs availables"
 
-#: home/templates/home/base.html:27
+#: home/templates/home/base.html:27 livro/templates/livro/index.html:3
 msgid "Livros"
 msgstr "Books"
 
 #: home/templates/home/base.html:32
+#: jogo_eletronico/templates/jogo_eletronico/index.html:3
 msgid "Jogos"
 msgstr "Games"
 
-#: home/templates/home/base.html:49
-msgid "Add Livro"
+#: home/templates/home/base.html:49 livro/templates/livro/livro_form.html:3
+msgid "Adicionar Livro"
 msgstr "Add Book"
 
 #: home/templates/home/base.html:54
-msgid "Add Jogo"
+#: jogo_eletronico/templates/jogo_eletronico/jogoeletronico_form.html:3
+msgid "Adicionar Jogo"
 msgstr "Add Game"
 
-#: home/templates/home/base.html:59
-msgid "Add Camiseta"
-msgstr "Add T-Shirt"
+#: home/templates/home/base.html:64
+msgid "Adicionar"
+msgstr "Add"
+
+#: home/templates/home/base.html:71
+msgid "Cadastre"
+msgstr "Register"
+
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:3
+msgid "Detalhes Jogo"
+msgstr "Game's Details"
+
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:8
+msgid "Estúdio"
+msgstr "Developer"
+
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:9
+msgid "Distribuidor"
+msgstr "Publisher"
+
+#: jogo_eletronico/templates/jogo_eletronico/index.html:7
+msgid "Lista de Jogos"
+msgstr "Games List"
+
+#: jogo_eletronico/templates/jogo_eletronico/index.html:22
+msgid "Não há jogos"
+msgstr "No games availables"
+
+#: livro/templates/livro/detail.html:3
+msgid "Detalhes Livro"
+msgstr "Book's Details"
+
+#: livro/templates/livro/detail.html:8
+msgid "Editora"
+msgstr "Publisher"
+
+#: livro/templates/livro/detail.html:10
+msgid "Autora"
+msgstr "Author"
+
+#: livro/templates/livro/detail.html:11
+msgid "Nro Páginas"
+msgstr "Pages Number"
+
+#: livro/templates/livro/detail.html:12
+msgid "Formato"
+msgstr "Format"
+
+#: livro/templates/livro/index.html:7
+msgid "Lista de livros"
+msgstr "Books List"
+
+#: livro/templates/livro/index.html:22
+msgid "Não há Livros"
+msgstr "No books availables"
+
+#: user/templates/registration/logged_out.html:6
+msgid "Clique aqui para logar novamente."
+msgstr "Click here to login again."
+
+#: user/templates/registration/login.html:6
+msgid "Usuário e/ou senha errado(s). Tente novamente."
+msgstr "Your username and password didn't match. Please try again."
+
+#: user/templates/registration/login.html:12
+msgid ""
+"Sua conta não tem permissão para esta páguna. Para proceder, entre com uma "
+"conta válida."
+msgstr ""
+"Your account doesn't have access to this page. To proceed, please login with "
+"an account that has access."
+
+#: user/templates/registration/login.html:15
+msgid "Entre com uma conta para ver esta página."
+msgstr "Please login to see this page."
+
+#: user/templates/registration/login.html:38
+msgid "Esqueceu sua senha"
+msgstr "Lost password"
+
+#: user/templates/registration/registration_form.html:3
+msgid "Registrar"
+msgstr "Register"

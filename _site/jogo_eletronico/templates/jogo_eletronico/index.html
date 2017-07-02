@@ -1,9 +1,10 @@
 {% extends 'home/base.html' %}
-{% block title %} jogos {% endblock %}
+{% load i18n %}
+{% block title %} {% trans "Jogos" %} {% endblock %}
 
 {% block body %}
 	{% if all_jogos %}
-	<h2> Lista de jogos </h2>
+	<h2> {% trans "Lista de Jogos" %}</h2>
 	<u1>
 	    {% for jogo in all_jogos %}
 	    <li><a href="{% url 'jogo:detail' jogo.id %}">{{ jogo.titulo }}</a></li>
@@ -12,12 +13,12 @@
 		<form action="{% url 'jogo:jogo-delete' jogo.id %}" method="POST" style="display: inline;">
 			{% csrf_token %}
 			<input type="hidden" name="jogo_id" value="{{ jogo.id }}"/>
-			<button type="submit" class="btn btn-default btn-sm"> Excluir </button>
+			<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
 		</form>
 
 		{% endfor %}
 	</u1>
 	{% else %}
-		<h2> Não há Jogos</h2>
+		<h2> {% trans "Não há jogos" %} </h2>
 	{% endif %}
 {% endblock %}

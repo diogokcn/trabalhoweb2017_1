@@ -1,17 +1,18 @@
 {% extends "home/base.html" %}
-
+{% load i18n %}
 {% block body %}
 
   {% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
+  <p> {% trans "Usuário e/ou senha errado(s). Tente novamente." %} </p>
   {% endif %}
 
   {% if next %}
       {% if user.is_authenticated %}
-      <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
+        <p> 
+          {% trans "Sua conta não tem permissão para esta páguna. Para proceder, entre com uma conta válida." %} 
+        </p>
       {% else %}
-      <p>Please login to see this page.</p>
+        <p> {% trans "Entre com uma conta para ver esta página." %}</p>
       {% endif %}
   {% endif %}
 
@@ -34,6 +35,6 @@
   </form>
 
   {# Assumes you setup the password_reset view in your URLconf #}
-  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+  <p><a href="{% url 'password_reset' %}"> {% trans "Esqueceu sua senha" %}? </a></p>
 
 {% endblock %}

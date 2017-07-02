@@ -1,13 +1,14 @@
 {% extends 'home/base.html' %}
-{% block title %} Detalhes Jogo {% endblock %}
+{% load i18n %}
+{% block title %} {% trans "Detalhes Jogo" %} {% endblock %}
 
 {% block body %}
-	<h2>Titulo: {{jogoeletronico.titulo}}</h2>
+	<h2> {% trans "Título" %}:  {{jogoeletronico.titulo}}</h2>
 	<ul>
-		<li> Estudio: {{jogoeletronico.estudio}} </li>
-		<li> Distribuidor: {{jogoeletronico.distribuidor}} </li>
-		<li> Genero: {{jogoeletronico.genero}}</li>
-		<li> Ano: {{jogoeletronico.ano}} </li>
-		<li> Preco: R${{jogoeletronico.preco}}</li>
+		<li> {% trans "Estúdio" %}: {{jogoeletronico.estudio}} </li>
+		<li> {% trans "Distribuidor" %}: {{jogoeletronico.distribuidor}} </li>
+		<li> {% trans "Gênero" %}: {{jogoeletronico.genero}}</li>
+		<li> {% trans "Ano" %}: {{jogoeletronico.ano}} </li>
+		<li> {% trans "Preço" %}: R${{jogoeletronico.preco}}</li>
 	</ul>
 {% endblock %}

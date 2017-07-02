@@ -1,14 +1,15 @@
 {% extends 'home/base.html' %}
-{% block title %} Detalhes Livro {% endblock %}
+{% load i18n %}
+{% block title %} {% trans "Detalhes Livro" %} {% endblock %}
 
 {% block body %}
-	<h2>Titulo: {{jogo_eletronico.titulo}}</h2>
+	<h2> {% trans "Título" %}: {{livro.titulo}} </h2>
 	<ul>
-		<li> Editora: {{livro.editora}} </li>
-		<li> Ano: {{livro.ano}} </li>
-		<li> Autora: {{livro.autora}}</li>
-		<li> Nro Paginas: {{livro.nroPags}} </li>
-		<li> Formato: {{livro.formato}}</li>
-		<li> Preco: R${{livro.preco}}</li>
+		<li> {% trans "Editora" %}: 	{{livro.editora}} </li>
+		<li> {% trans "Ano" %}: 		{{livro.ano}} </li>
+		<li> {% trans "Autora" %}:  	{{livro.autora}}</li>
+		<li> {% trans "Nro Páginas" %}: {{livro.nroPags}} </li>
+		<li> {% trans "Formato" %}: 	{{livro.formato}}</li>
+		<li> {% trans "Preço" %}: R$	{{livro.preco}}</li>
 	</ul>
 {% endblock %}
