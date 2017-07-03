@@ -1,7 +1,10 @@
 
 Falta fazer:
-    - Internacionalização para Jogos e Livros;
-    - Internacionalização dos formulários de adicionar;
+    - Admin poder excluir qualquer item criado;
     - 1 funcionalidade para cada membro do grupo;
     - Documento do sistema (casos de uso, classes, etc)
+    - Manual de instalação e uso do Django e projeto.
+
+Momento Remember:
+	- Não precisa de botão ou menu para trocar idioma.
         

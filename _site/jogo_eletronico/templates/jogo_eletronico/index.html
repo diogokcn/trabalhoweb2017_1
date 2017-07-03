@@ -10,7 +10,7 @@
 	    <!-- Detail -->
 	    <li><a href="{% url 'jogo:detail' jogo.id %}">{{ jogo.titulo }}</a></li>
 	 
-		 	{% if request.user == jogo.user %}
+		 	{% if request.user == jogo.user or request.user.is_superuser %}
 		 	<!-- Delete -->
 			<form action="{% url 'jogo:jogo-delete' jogo.id %}" method="POST" style="display: inline;">
 				{% csrf_token %}

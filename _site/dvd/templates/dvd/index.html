@@ -9,13 +9,14 @@
 		    {% for dvd in all_dvd %}
 		    <li><a href="{% url 'dvd:detail' dvd.id %}">{{ dvd.titulo }}</a></li>
 		 
-		 	<!-- Delete -->
-			<form action="{% url 'dvd:dvd-delete' dvd.id %}" method="POST" style="display: inline;">
-				{% csrf_token %}
-				<input type="hidden" name="dvd_id" value="{{ dvd.id }}"/>
-				<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
-			</form>
-
+			 	{% if request.user == dvd.user or request.user.is_superuser %}
+				 	<!-- Delete -->
+					<form action="{% url 'dvd:dvd-delete' dvd.id %}" method="POST" style="display: inline;">
+						{% csrf_token %}
+						<input type="hidden" name="dvd_id" value="{{ dvd.id }}"/>
+						<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
+					</form>
+				{% endif %}		
 			{% endfor %}
 		</u1>
 	{% else %}

@@ -9,7 +9,7 @@
 		    {% for camiseta in all_camiseta %}
 		    <li><a href="{% url 'camiseta:detail' camiseta.id %}">{{ camiseta.marca }}</a></li>
 		 
-			 	{% if request.user == camiseta.user %}
+			 	{% if request.user == camiseta.user or request.user.is_superuser %}
 				 	<!-- Delete -->
 					<form action="{% url 'camiseta:camiseta-delete' camiseta.id %}" method="POST" style="display: inline;">
 						{% csrf_token %}

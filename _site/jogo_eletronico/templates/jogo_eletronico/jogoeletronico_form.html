@@ -3,6 +3,7 @@
 {% block title %} {% trans "Adicionar Jogo" %} {% endblock %}
 
 {% block body %}
+	<h3><b> {% trans "Digite os dados do jogo" %} </b></h3>
 	<form class="form-horizontal" action="" method="POST" >
 		{% csrf_token %}
 		{% include 'home/form-template.html' %}

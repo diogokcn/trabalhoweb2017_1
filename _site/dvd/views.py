@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
+from django.utils.translation import ugettext_lazy
 from .models import DVD
 
 class IndexView(generic.ListView):
@@ -21,7 +22,12 @@ class DetailView(generic.DetailView):
 class DVDCreate(CreateView):
 	model = DVD
 	fields = ['titulo', 'genero', 'ano', 'duracao', 'preco']
-
+	
+	def form_valid(self, form):
+		DVD = form.save(commit=False)
+		DVD.user = self.request.user
+		return super(DVDCreate, self).form_valid(form)
+		
 # Update
 class DVDUpdate(UpdateView):
 	model = DVD
