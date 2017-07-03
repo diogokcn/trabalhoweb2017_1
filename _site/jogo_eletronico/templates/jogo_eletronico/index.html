@@ -7,14 +7,17 @@
 	<h2> {% trans "Lista de Jogos" %}</h2>
 	<u1>
 	    {% for jogo in all_jogos %}
+	    <!-- Detail -->
 	    <li><a href="{% url 'jogo:detail' jogo.id %}">{{ jogo.titulo }}</a></li>
 	 
-	 	<!-- Delete -->
-		<form action="{% url 'jogo:jogo-delete' jogo.id %}" method="POST" style="display: inline;">
-			{% csrf_token %}
-			<input type="hidden" name="jogo_id" value="{{ jogo.id }}"/>
-			<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
-		</form>
+		 	{% if request.user == jogo.user %}
+		 	<!-- Delete -->
+			<form action="{% url 'jogo:jogo-delete' jogo.id %}" method="POST" style="display: inline;">
+				{% csrf_token %}
+				<input type="hidden" name="jogo_id" value="{{ jogo.id }}"/>
+				<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
+			</form>
+			{% endif %}
 
 		{% endfor %}
 	</u1>

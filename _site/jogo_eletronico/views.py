@@ -22,6 +22,11 @@ class JogoCreate(CreateView):
 	fields = ['titulo', 'estudio', 'distribuidor',
 	'genero', 'ano', 'preco']
 
+	def form_valid(self, form):
+		JogoEletronico = form.save(commit=False)
+		JogoEletronico.user = self.request.user
+		return super(JogoCreate, self).form_valid(form)
+
 class JogoUpdate(UpdateView):
 	model = JogoEletronico
 	fields = ['titulo', 'estudio', 'distribuidor',
