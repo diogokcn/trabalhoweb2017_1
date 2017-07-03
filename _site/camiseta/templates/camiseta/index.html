@@ -9,13 +9,14 @@
 		    {% for camiseta in all_camiseta %}
 		    <li><a href="{% url 'camiseta:detail' camiseta.id %}">{{ camiseta.marca }}</a></li>
 		 
-		 	<!-- Delete -->
-			<form action="{% url 'camiseta:camiseta-delete' camiseta.id %}" method="POST" style="display: inline;">
-				{% csrf_token %}
-				<input type="hidden" name="camiseta_id" value="{{ camiseta.id }}"/>
-				<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
-			</form>
-
+			 	{% if request.user == camiseta.user %}
+				 	<!-- Delete -->
+					<form action="{% url 'camiseta:camiseta-delete' camiseta.id %}" method="POST" style="display: inline;">
+						{% csrf_token %}
+						<input type="hidden" name="camiseta_id" value="{{ camiseta.id }}"/>
+						<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
+					</form>
+				{% endif %}
 			{% endfor %}
 		</u1>
 	{% else %}

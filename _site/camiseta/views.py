@@ -23,6 +23,11 @@ class CamisetaCreate(CreateView):
 	model = Camiseta
 	fields = ['marca', 'tamanho', 'cor', 'tecido', 'preco']
 
+	def form_valid(self, form):
+		Camiseta = form.save(commit=False)
+		Camiseta.user = self.request.user
+		return super(CamisetaCreate, self).form_valid(form)
+
 # Update
 class CamisetaUpdate(UpdateView):
 	model = Camiseta
