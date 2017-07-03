@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
+# -*- coding: utf-8 -*-
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 from django.utils.translation import ugettext_lazy as _
@@ -96,11 +98,11 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 LANGUAGES = (
-    ('en',    _('English')),
-    ('pt-br', _('Portugues Brasileiro'))
+    ('pt-br', _('Portugues Brasileiro')),
+    ('en',    _('English'))
 )
 
 TIME_ZONE = 'America/Sao_Paulo'

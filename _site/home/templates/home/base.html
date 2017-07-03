@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load i18n %}
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<title>{% block title %} Homepage {% endblock %}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -80,11 +80,9 @@
 					<!-- Se usuario estiver logado, aparecer a opcao de logout -->
 					{% if request.user.is_authenticated %}
 					<li>
-						<a href="{% url 'logout' %}"> Welcome: {{user.username}}<br> Logout </a>
+						<a href="{% url 'logout' %}"> {% trans "Bem-Vindo" %}: {{user.username}}<br> Logout </a>
 					</li>
 					{% endif %}
-					
-					
 				</ul>
 			</div>
 		</div>
