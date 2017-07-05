@@ -5,7 +5,6 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from .models import Livro
 
-
 class IndexView(generic.ListView):
 	template_name = 'livro/index.html'
 	context_object_name = 'all_livro'
@@ -18,11 +17,16 @@ class DetailView(generic.DetailView):
 	model = Livro
 	template_name = 'livro/detail.html'
 
-
 class LivroCreate(CreateView):
 	model = Livro
 	fields = ['titulo', 'ano', 'editora',
 	'autora', 'nroPags', 'formato', 'preco']
+
+	def form_valid(self, form):
+		Livro = form.save(commit=False)
+		Livro.user = self.request.user
+		return super(LivroCreate, self).form_valid(form)
+
 
 class LivroUpdate(UpdateView):
 	model = Livro
@@ -33,6 +37,3 @@ class LivroUpdate(UpdateView):
 class LivroDelete(DeleteView):
 	model = Livro
 	success_url = reverse_lazy('livro:index')
-
-
-#class UserFormVIew(View):

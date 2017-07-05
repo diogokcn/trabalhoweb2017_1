@@ -47,44 +47,47 @@
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<!-- Livro -->
-					<li class="">
-						<a href="{% url 'livro:livro-add' %}"> {% trans "Adicionar Livro" %} </a>
-					</li>
+					<!-- Opções de add, apenas se usuario estiver logado -->
+					{% if request.user.is_authenticated %}
+						<!-- Livro -->
+						<li class="">
+							<a href="{% url 'livro:livro-add' %}"> {% trans "Adicionar Livro" %} </a>
+						</li>
 
-					<!-- Jogo -->
-					<li class="">
-						<a href="{% url 'jogo:jogo-add' %}"> {% trans "Adicionar Jogo" %} </a>
-					</li>
+						<!-- Jogo -->
+						<li class="">
+							<a href="{% url 'jogo:jogo-add' %}"> {% trans "Adicionar Jogo" %} </a>
+						</li>
 
-					<!-- Camiseta -->
-					<li class="">
-						<a href="{% url 'camiseta:camiseta-add' %}"> {% trans "Adicionar Camiseta" %} </a>
-					</li>
+						<!-- Camiseta -->
+						<li class="">
+							<a href="{% url 'camiseta:camiseta-add' %}"> {% trans "Adicionar Camiseta" %} </a>
+						</li>
 
-					<!-- DVD -->
-					<li class="">
-						<a href="{% url 'dvd:dvd-add' %}"> {% trans "Adicionar" %} DVD </a>
-					</li>
+						<!-- DVD -->
+						<li class="">
+							<a href="{% url 'dvd:dvd-add' %}"> {% trans "Adicionar" %} DVD </a>
+						</li>
+					{% endif %}
 
 					<!-- Se usuario nao estiver logado, aparecer a opcao de login -->
 					{% if not request.user.is_authenticated %}
-					<!-- Cadastrar usuario -->
-					<li>
-						<a href="{% url 'user:register' %}"> {% trans "Cadastre" %} </a>
-					</li>
+						<!-- Cadastrar usuario -->
+						<li>
+							<a href="{% url 'user:register' %}"> {% trans "Cadastre" %} </a>
+						</li>
 
-					<!-- Logar usuario -->
-					<li>
-						<a href="{% url 'login' %}"> Login </a>
-					</li>
+						<!-- Logar usuario -->
+						<li>
+							<a href="{% url 'login' %}"> Login </a>
+						</li>
 					{% endif %}
 
 					<!-- Se usuario estiver logado, aparecer a opcao de logout -->
 					{% if request.user.is_authenticated %}
-					<li>
-						<a href="{% url 'logout' %}"> {% trans "Bem-Vindo" %}: {{user.username}}<br> Logout </a>
-					</li>
+						<li>
+							<a href="{% url 'logout' %}"> {% trans "Bem-Vindo" %}: {{user.username}}<br> Logout </a>
+						</li>
 					{% endif %}
 				</ul>
 			</div>

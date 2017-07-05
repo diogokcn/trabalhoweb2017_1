@@ -8,16 +8,29 @@
 	<u1>
 	    {% for jogo in all_jogos %}
 	    <!-- Detail -->
-	    <li><a href="{% url 'jogo:detail' jogo.id %}">{{ jogo.titulo }}</a></li>
-	 
+	    <li><a href="{% url 'jogo:detail' jogo.id %}">{{ jogo.titulo }}</a>	 
 		 	{% if request.user == jogo.user or request.user.is_superuser %}
-		 	<!-- Delete -->
-			<form action="{% url 'jogo:jogo-delete' jogo.id %}" method="POST" style="display: inline;">
-				{% csrf_token %}
-				<input type="hidden" name="jogo_id" value="{{ jogo.id }}"/>
-				<button type="submit" class="btn btn-default btn-sm"> {% trans "Excluir" %} </button>
-			</form>
+			 	<!-- Delete -->
+				<form action="{% url 'jogo:jogo-delete' jogo.id %}" method="POST" style="display: inline;">
+					{% csrf_token %}
+					<input type="hidden" name="jogo_id" value="{{ jogo.id }}"/>
+					<button type="submit" class="btn btn-default btn-sm"> 
+						<span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+					</button>
+				</form>
 			{% endif %}
+
+			{% if request.user == jogo.user %}
+				<!-- Edit -->
+				<form action="{% url 'jogo:jogo-update' jogo.id %}" method="POST" style="display: inline;">
+				{% csrf_token %}
+					<input type="hidden" name="jogo_id" value="{{ jogo.id }}"/>
+					<button type="submit" class="btn btn-default btn-sm">
+						<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+					</button>
+				</form>
+			{% endif %}
+		</li>
 
 		{% endfor %}
 	</u1>
