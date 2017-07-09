@@ -42,13 +42,15 @@ INSTALLED_APPS = (
     'dvd',
     'jogo_eletronico',
     'livro',
-    'user',   
+    'user',
+    'django_comments',   
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -122,3 +124,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/home/'
+
+SITE_ID = 1

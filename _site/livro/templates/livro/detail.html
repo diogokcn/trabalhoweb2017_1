@@ -1,5 +1,6 @@
 {% extends 'home/base.html' %}
 {% load i18n %}
+{% load comments %}
 {% block title %} {% trans "Detalhes Livro" %} {% endblock %}
 
 {% block body %}
@@ -12,4 +13,24 @@
 		<li> {% trans "Formato" %}: 	{{livro.formato}}</li>
 		<li> {% trans "Preço" %}: R$	{{livro.preco}}</li>
 	</ul>
+
+	{% render_comment_list for livro %}
+
+	{% if user.is_authenticated %}
+	    {% get_comment_form for object as form %}
+	    <form action="{% comment_form_target %}" method="POST">
+	    {% csrf_token %}
+	    {{ form.comment }}
+	    <!--{{ form.honeypot }} -->
+	    {{ form.content_type }}
+	    {{ form.object_pk }}
+	    {{ form.timestamp }}
+	    {{ form.security_hash }}
+	    <input type="hidden" name="next" value="{% url 'livro:detail' livro.id %}" />
+	    <input type="submit" value="Add comment" id="id_submit" />
+	    </form>
+	{% else %}
+    	<p>Please <a href="{% url 'login' %}">log in</a> to leave a comment.</p>
+	{% endif %}
+
 {% endblock %}

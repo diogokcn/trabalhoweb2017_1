@@ -41,4 +41,5 @@ urlpatterns = i18n_patterns(
     url(r'^camiseta/',       include('camiseta.urls', namespace='camiseta')),
     url(r'^dvd/',            include('dvd.urls', namespace='dvd')),
     url(r'^jogoeletronico/', include('jogo_eletronico.urls', namespace='jogo')),
+    url(r'^comments/',       include('django_comments.urls')),
 )
