@@ -1,0 +1,22 @@
+{% extends 'home/base.html' %}
+{% load i18n %}
+
+{% block body %}
+	<form method="get">
+    	{{ filter.form.as_p }}
+    	<button type="submit"> {% trans "Procurar" %} </button>
+  	</form> 
+  	<br>
+
+	{% block content %}
+		<ul>		
+			{% for camiseta in filter.qs %}
+		    	<li> 
+		    		<a href="{% url 'camiseta:detail' camiseta.id %}"> {{ camiseta.marca }} </a> 
+		    		{% trans "por R$" %}{{ camiseta.preco }} 
+		    	</li>
+
+		  	{% endfor %}
+	  	</ul>
+	{% endblock %}
+{% endblock %}

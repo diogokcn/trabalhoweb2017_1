@@ -18,4 +18,7 @@ urlpatterns = [
 
     #/camiseta/<id>/delete/
     url(r'(?P<pk>[0-9]+)/delete/$', views.CamisetaDelete.as_view(), name='camiseta-delete'),
+
+    url(r'^search/$', views.search, name='camiseta-search'),
 ]
+

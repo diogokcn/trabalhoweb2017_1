@@ -19,17 +19,6 @@ from django.conf.urls.i18n import i18n_patterns
 from home import views
 from django.contrib import admin
 
-# urlpatterns = [
-#     url(r'^admin/',          include(admin.site.urls)),
-#     url(r'^accounts/',       include('django.contrib.auth.urls')),
-#     url(r'^home/',           include('home.urls', namespace='home')),
-#     url(r'^user/',           include('user.urls', namespace='user')),
-#     url(r'^livro/',          include('livro.urls', namespace='livro')),
-#     url(r'^camiseta/',       include('camiseta.urls', namespace='camiseta')),
-#     url(r'^dvd/',            include('dvd.urls', namespace='dvd')),
-#     url(r'^jogoeletronico/', include('jogo_eletronico.urls', namespace='jogo')),
-# ]
-
 # I8n URLs
 urlpatterns = i18n_patterns(
     url(r'^$',               'home.views.index'),

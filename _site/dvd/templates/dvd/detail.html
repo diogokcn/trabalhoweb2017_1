@@ -28,7 +28,7 @@
 	    <input type="submit" value="Add comment" id="id_submit" />
 	    </form>
 	{% else %}
-    	<p>Please <a href="{% url 'login' %}">log in</a> to leave a comment.</p>
+    	<p> {% trans "Por favor" %} <a href="{% url 'login' %}"> log in </a> {% trans "para deixar um comentário." %} </p>
 	{% endif %}
 
 {% endblock %}

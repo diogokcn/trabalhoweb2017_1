@@ -5,6 +5,7 @@
 {% block body %}
 	{% if all_camiseta %}
 	<h2> {% trans "Lista de camisetas" %} </h2>
+		<a href="{% url 'camiseta:camiseta-search' %}" class="btn btn-primary active"> {% trans "Procurar Camisetas" %} </a>
 		<u1>
 		    {% for camiseta in all_camiseta %}
 		    <!-- Detail -->

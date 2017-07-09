@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-03 14:59-0300\n"
+"POT-Creation-Date: 2017-07-09 19:07-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,40 +17,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: _site/settings.py:104
+#: _site/settings.py:107
 msgid "Portugues Brasileiro"
 msgstr "Brazilian Portuguese"
 
-#: _site/settings.py:105
+#: _site/settings.py:108
 msgid "English"
 msgstr ""
 
-#: camiseta/models.py:11 camiseta/templates/camiseta/detail.html:8
+#: camiseta/models.py:11 camiseta/templates/camiseta/detail.html:9
 msgid "Marca"
 msgstr "Brand"
 
-#: camiseta/models.py:12 camiseta/templates/camiseta/detail.html:9
+#: camiseta/models.py:12 camiseta/templates/camiseta/detail.html:10
 msgid "Tamanho"
 msgstr "Size"
 
-#: camiseta/models.py:13 camiseta/templates/camiseta/detail.html:10
+#: camiseta/models.py:13 camiseta/templates/camiseta/detail.html:11
 msgid "Cor"
 msgstr "Color"
 
-#: camiseta/models.py:14 camiseta/templates/camiseta/detail.html:11
+#: camiseta/models.py:14 camiseta/templates/camiseta/detail.html:12
 msgid "Tecido"
 msgstr "Fabric"
 
-#: camiseta/models.py:15 camiseta/templates/camiseta/detail.html:12
-#: dvd/models.py:13 dvd/templates/dvd/detail.html:11
+#: camiseta/models.py:15 camiseta/templates/camiseta/detail.html:13
+#: dvd/models.py:15 dvd/templates/dvd/detail.html:12
 #: jogo_eletronico/models.py:16
-#: jogo_eletronico/templates/jogo_eletronico/detail.html:12 livro/models.py:15
-#: livro/templates/livro/detail.html:13
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:13 livro/models.py:17
+#: livro/templates/livro/detail.html:14
 msgid "Preço"
 msgstr "Price"
 
 #: camiseta/templates/camiseta/camiseta_form.html:3
-#: home/templates/home/base.html:59
+#: home/templates/home/base.html:64
 msgid "Adicionar Camiseta"
 msgstr "Add T-shirt"
 
@@ -66,15 +66,35 @@ msgstr "Type T-shirt details"
 msgid "Submeter"
 msgstr "Submit"
 
-#: camiseta/templates/camiseta/detail.html:3 dvd/templates/dvd/detail.html:3
+#: camiseta/templates/camiseta/camiseta_list.html:7
+msgid "Procurar"
+msgstr "Search"
+
+#: camiseta/templates/camiseta/camiseta_list.html:16
+msgid "por R$"
+msgstr "for $"
+
+#: camiseta/templates/camiseta/detail.html:4 dvd/templates/dvd/detail.html:4
 msgid "Detalhes"
 msgstr "Details"
 
-#: camiseta/templates/camiseta/detail.html:6
+#: camiseta/templates/camiseta/detail.html:7
 msgid "Camiseta"
 msgstr "T-Shirt"
 
-#: camiseta/templates/camiseta/index.html:3 home/templates/home/base.html:37
+#: camiseta/templates/camiseta/detail.html:32 dvd/templates/dvd/detail.html:31
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:32
+#: livro/templates/livro/detail.html:33
+msgid "Por favor"
+msgstr "Please"
+
+#: camiseta/templates/camiseta/detail.html:32 dvd/templates/dvd/detail.html:31
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:32
+#: livro/templates/livro/detail.html:33
+msgid "para deixar um comentário."
+msgstr "to leave a comment."
+
+#: camiseta/templates/camiseta/index.html:3 home/templates/home/base.html:40
 msgid "Camisetas"
 msgstr "T-shirts"
 
@@ -82,36 +102,35 @@ msgstr "T-shirts"
 msgid "Lista de camisetas"
 msgstr "T-shirts List"
 
-#: camiseta/templates/camiseta/index.html:17 dvd/templates/dvd/index.html:16
-#: jogo_eletronico/templates/jogo_eletronico/index.html:18
-#: livro/templates/livro/index.html:16
-msgid "Excluir"
-msgstr "Delete"
+#: camiseta/templates/camiseta/index.html:8
+msgid "Procurar Camisetas"
+msgstr "Search T-shirts"
 
-#: camiseta/templates/camiseta/index.html:23
+#: camiseta/templates/camiseta/index.html:39
 msgid "Não há camisetas"
 msgstr "No T-shirts availables"
 
-#: dvd/models.py:9 dvd/templates/dvd/detail.html:6 jogo_eletronico/models.py:11
-#: jogo_eletronico/templates/jogo_eletronico/detail.html:6 livro/models.py:9
-#: livro/templates/livro/detail.html:6
+#: dvd/models.py:11 dvd/templates/dvd/detail.html:7
+#: jogo_eletronico/models.py:11
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:7 livro/models.py:11
+#: livro/templates/livro/detail.html:7
 msgid "Título"
 msgstr "Title"
 
-#: dvd/models.py:10 dvd/templates/dvd/detail.html:8
+#: dvd/models.py:12 dvd/templates/dvd/detail.html:9
 #: jogo_eletronico/models.py:14
-#: jogo_eletronico/templates/jogo_eletronico/detail.html:10
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:11
 msgid "Gênero"
 msgstr "Genre"
 
-#: dvd/models.py:11 dvd/templates/dvd/detail.html:9
+#: dvd/models.py:13 dvd/templates/dvd/detail.html:10
 #: jogo_eletronico/models.py:15
-#: jogo_eletronico/templates/jogo_eletronico/detail.html:11 livro/models.py:10
-#: livro/templates/livro/detail.html:9
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:12 livro/models.py:12
+#: livro/templates/livro/detail.html:10
 msgid "Ano"
 msgstr "Year"
 
-#: dvd/models.py:12 dvd/templates/dvd/detail.html:10
+#: dvd/models.py:14 dvd/templates/dvd/detail.html:11
 msgid "Duração"
 msgstr "Duration"
 
@@ -127,51 +146,51 @@ msgstr "Type DVD details"
 msgid "Lista de DVDs"
 msgstr "DVDs List"
 
-#: dvd/templates/dvd/index.html:22
+#: dvd/templates/dvd/index.html:36
 msgid "Não há DVDs"
 msgstr "No DVDs availables"
 
-#: home/templates/home/base.html:27 livro/templates/livro/index.html:3
+#: home/templates/home/base.html:30 livro/templates/livro/index.html:3
 msgid "Livros"
 msgstr "Books"
 
-#: home/templates/home/base.html:32
+#: home/templates/home/base.html:35
 #: jogo_eletronico/templates/jogo_eletronico/index.html:3
 msgid "Jogos"
 msgstr "Games"
 
-#: home/templates/home/base.html:49 livro/templates/livro/livro_form.html:3
+#: home/templates/home/base.html:54 livro/templates/livro/livro_form.html:3
 msgid "Adicionar Livro"
 msgstr "Add Book"
 
-#: home/templates/home/base.html:54
+#: home/templates/home/base.html:59
 #: jogo_eletronico/templates/jogo_eletronico/jogoeletronico_form.html:3
 msgid "Adicionar Jogo"
 msgstr "Add Game"
 
-#: home/templates/home/base.html:64
+#: home/templates/home/base.html:69
 msgid "Adicionar"
 msgstr "Add"
 
-#: home/templates/home/base.html:71
+#: home/templates/home/base.html:77
 msgid "Cadastre"
 msgstr "Register"
 
-#: home/templates/home/base.html:83
+#: home/templates/home/base.html:89
 msgid "Bem-Vindo"
 msgstr "Welcome"
 
 #: jogo_eletronico/models.py:12
-#: jogo_eletronico/templates/jogo_eletronico/detail.html:8
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:9
 msgid "Estúdio"
 msgstr "Developer"
 
 #: jogo_eletronico/models.py:13
-#: jogo_eletronico/templates/jogo_eletronico/detail.html:9
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:10
 msgid "Distribuidor"
 msgstr "Publisher"
 
-#: jogo_eletronico/templates/jogo_eletronico/detail.html:3
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:4
 msgid "Detalhes Jogo"
 msgstr "Game's Details"
 
@@ -179,7 +198,7 @@ msgstr "Game's Details"
 msgid "Lista de Jogos"
 msgstr "Games List"
 
-#: jogo_eletronico/templates/jogo_eletronico/index.html:25
+#: jogo_eletronico/templates/jogo_eletronico/index.html:38
 msgid "Não há jogos"
 msgstr "No games availables"
 
@@ -187,23 +206,23 @@ msgstr "No games availables"
 msgid "Digite os dados do jogo"
 msgstr "Type game details"
 
-#: livro/models.py:11 livro/templates/livro/detail.html:8
+#: livro/models.py:13 livro/templates/livro/detail.html:9
 msgid "Editora"
 msgstr "Publisher"
 
-#: livro/models.py:12 livro/templates/livro/detail.html:10
+#: livro/models.py:14 livro/templates/livro/detail.html:11
 msgid "Autora"
 msgstr "Author"
 
-#: livro/models.py:13 livro/templates/livro/detail.html:11
+#: livro/models.py:15 livro/templates/livro/detail.html:12
 msgid "Nro Páginas"
 msgstr "Paperback"
 
-#: livro/models.py:14 livro/templates/livro/detail.html:12
+#: livro/models.py:16 livro/templates/livro/detail.html:13
 msgid "Formato"
 msgstr "Format"
 
-#: livro/templates/livro/detail.html:3
+#: livro/templates/livro/detail.html:4
 msgid "Detalhes Livro"
 msgstr "Book's Details"
 
@@ -211,7 +230,7 @@ msgstr "Book's Details"
 msgid "Lista de livros"
 msgstr "Books List"
 
-#: livro/templates/livro/index.html:22
+#: livro/templates/livro/index.html:39
 msgid "Não há Livros"
 msgstr "No books availables"
 

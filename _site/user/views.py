@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
 from .forms import UserForm
+from django.contrib.auth.models import User
 from django.http import Http404
 
 class UserFormView(View):

@@ -5,6 +5,12 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from django.utils.translation import ugettext_lazy
 from .models import Camiseta
+from .filters import CamisetaFilter
+
+def search(request):
+    camiseta_list = Camiseta.objects.all()
+    camiseta_filter = CamisetaFilter(request.GET, queryset=camiseta_list)
+    return render(request, 'camiseta/camiseta_list.html', {'filter': camiseta_filter})
 
 class IndexView(generic.ListView):
 	template_name = 'camiseta/index.html'

@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'jogo_eletronico',
     'livro',
     'user',
+    'django_filters',
     'django_comments',   
     'django.contrib.admin',
     'django.contrib.auth',
