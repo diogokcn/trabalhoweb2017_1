@@ -5,6 +5,12 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from django.utils.translation import ugettext_lazy
 from .models import DVD
+from .filters import DVDFilter
+
+def search(request):
+    DVD_list = DVD.objects.all()
+    DVD_filter = DVDFilter(request.GET, queryset=DVD_list)
+    return render(request, 'dvd/dvd_list.html', {'filter': DVD_filter})
 
 class IndexView(generic.ListView):
 	template_name = 'dvd/index.html'

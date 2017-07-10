@@ -10,10 +10,9 @@
 
 	{% block content %}
 		<ul>		
-			{% for camiseta in filter.qs %}
+			{% for dvd in filter.qs %}
 		    	<li> 
-		    		<a href="{% url 'camiseta:detail' camiseta.id %}"> {{ camiseta.marca }} </a> 
-		    		{% trans "por R$" %}{{ camiseta.preco }} 
+		    		<a href="{% url 'dvd:detail' dvd.id %}"> {{ dvd.titulo }} </a> ({% trans "Ano" %}: {{ dvd.ano }})
 		    	</li>
 		  	{% endfor %}
 	  	</ul>

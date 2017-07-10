@@ -4,6 +4,12 @@ from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from .models import Livro
+from .filters import LivroFilter
+
+def search(request):
+    Livro_list = Livro.objects.all()
+    Livro_filter = LivroFilter(request.GET, queryset=Livro_list)
+    return render(request, 'livro/livro_list.html', {'filter': Livro_filter})
 
 class IndexView(generic.ListView):
 	template_name = 'livro/index.html'

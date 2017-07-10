@@ -18,4 +18,7 @@ urlpatterns = [
 
     #/livro/<id>/delete/
     url(r'(?P<pk>[0-9]+)/delete/$', views.LivroDelete.as_view(), name='livro-delete'),
+
+    #/livro/search/
+    url(r'^search/$', views.search, name='livro-search'),
 ]

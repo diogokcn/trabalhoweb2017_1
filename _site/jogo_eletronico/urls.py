@@ -18,4 +18,7 @@ urlpatterns = [
 
     #/jogo/<id>/delete/
     url(r'(?P<pk>[0-9]+)/delete/$', views.JogoDelete.as_view(), name='jogo-delete'),
+
+    #/jogo/search/
+    url(r'^search/$', views.search, name='jogo-search'),
 ]

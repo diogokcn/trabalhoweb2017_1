@@ -10,10 +10,9 @@
 
 	{% block content %}
 		<ul>		
-			{% for camiseta in filter.qs %}
+			{% for livro in filter.qs %}
 		    	<li> 
-		    		<a href="{% url 'camiseta:detail' camiseta.id %}"> {{ camiseta.marca }} </a> 
-		    		{% trans "por R$" %}{{ camiseta.preco }} 
+		    		<a href="{% url 'livro:detail' livro.id %}"> {{ livro.titulo }} </a> ({% trans "Editora" %}: {{ livro.editora}})
 		    	</li>
 		  	{% endfor %}
 	  	</ul>

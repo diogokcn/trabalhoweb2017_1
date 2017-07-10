@@ -5,6 +5,7 @@
 {% block body %}
 	{% if all_livro %}
 	<h2> {% trans "Lista de livros" %} </h2>
+	<a href="{% url 'livro:livro-search' %}" class="btn btn-primary active"> {% trans "Procurar Livros" %} </a>
 	<u1>
 	    {% for livro in all_livro %}
 	    	<!-- Detail -->

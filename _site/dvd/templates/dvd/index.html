@@ -5,6 +5,7 @@
 {% block body %}
 	{% if all_dvd %}
 	<h2> {% trans "Lista de DVDs" %} </h2>
+		<a href="{% url 'dvd:dvd-search' %}" class="btn btn-primary active"> {% trans "Procurar DVDs" %} </a>
 		<u1>
 		    {% for dvd in all_dvd %}
 		    <li><a href="{% url 'dvd:detail' dvd.id %}">{{ dvd.titulo }}</a>		 

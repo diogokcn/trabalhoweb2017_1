@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-09 19:07-0300\n"
+"POT-Creation-Date: 2017-07-09 23:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,6 +67,9 @@ msgid "Submeter"
 msgstr "Submit"
 
 #: camiseta/templates/camiseta/camiseta_list.html:7
+#: dvd/templates/dvd/dvd_list.html:7
+#: jogo_eletronico/templates/jogo_eletronico/jogo_list.html:7
+#: livro/templates/livro/livro_list.html:7
 msgid "Procurar"
 msgstr "Search"
 
@@ -81,6 +84,12 @@ msgstr "Details"
 #: camiseta/templates/camiseta/detail.html:7
 msgid "Camiseta"
 msgstr "T-Shirt"
+
+#: camiseta/templates/camiseta/detail.html:29 dvd/templates/dvd/detail.html:28
+#: jogo_eletronico/templates/jogo_eletronico/detail.html:29
+#: livro/templates/livro/detail.html:30"
+msgid "Adicionar comentário"
+msgstr "Add Comment"
 
 #: camiseta/templates/camiseta/detail.html:32 dvd/templates/dvd/detail.html:31
 #: jogo_eletronico/templates/jogo_eletronico/detail.html:32
@@ -124,7 +133,7 @@ msgid "Gênero"
 msgstr "Genre"
 
 #: dvd/models.py:13 dvd/templates/dvd/detail.html:10
-#: jogo_eletronico/models.py:15
+#: dvd/templates/dvd/dvd_list.html:15 jogo_eletronico/models.py:15
 #: jogo_eletronico/templates/jogo_eletronico/detail.html:12 livro/models.py:12
 #: livro/templates/livro/detail.html:10
 msgid "Ano"
@@ -146,7 +155,11 @@ msgstr "Type DVD details"
 msgid "Lista de DVDs"
 msgstr "DVDs List"
 
-#: dvd/templates/dvd/index.html:36
+#: dvd/templates/dvd/index.html:8
+msgid "Procurar DVDs"
+msgstr "Search DVDs"
+
+#: dvd/templates/dvd/index.html:37
 msgid "Não há DVDs"
 msgstr "No DVDs availables"
 
@@ -198,15 +211,24 @@ msgstr "Game's Details"
 msgid "Lista de Jogos"
 msgstr "Games List"
 
-#: jogo_eletronico/templates/jogo_eletronico/index.html:38
+#: jogo_eletronico/templates/jogo_eletronico/index.html:8
+msgid "Procurar Jogos"
+msgstr "Search Games"
+
+#: jogo_eletronico/templates/jogo_eletronico/index.html:39
 msgid "Não há jogos"
 msgstr "No games availables"
+
+#: jogo_eletronico/templates/jogo_eletronico/jogo_list.html:15
+msgid "Desenvolvedor"
+msgstr "Developer"
 
 #: jogo_eletronico/templates/jogo_eletronico/jogoeletronico_form.html:6
 msgid "Digite os dados do jogo"
 msgstr "Type game details"
 
 #: livro/models.py:13 livro/templates/livro/detail.html:9
+#: livro/templates/livro/livro_list.html:15
 msgid "Editora"
 msgstr "Publisher"
 
@@ -230,7 +252,11 @@ msgstr "Book's Details"
 msgid "Lista de livros"
 msgstr "Books List"
 
-#: livro/templates/livro/index.html:39
+#: livro/templates/livro/index.html:8
+msgid "Procurar Livros"
+msgstr "Search Books"
+
+#: livro/templates/livro/index.html:40
 msgid "Não há Livros"
 msgstr "No books availables"
 

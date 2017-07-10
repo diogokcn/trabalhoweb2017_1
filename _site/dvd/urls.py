@@ -18,4 +18,7 @@ urlpatterns = [
 
     #/dvd/<id>/delete/
     url(r'(?P<pk>[0-9]+)/delete/$', views.DVDDelete.as_view(), name='dvd-delete'),
+    
+    #/dvd/search/
+    url(r'^search/$', views.search, name='dvd-search'),
 ]
