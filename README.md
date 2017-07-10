@@ -1,11 +1,6 @@
 # trabalhoweb2017_1
-Trabalho para disciplina Desenvolvimento de Software para a Web, turma A.
 
-Este trabalho utiliza o framework Django¹ no desenvolvimento de um site de catálogo de camisetas, dvds, jogos eletrônicos e livros.
-
-¹ https://www.djangoproject.com/
-
-##  Uso local
+#  Uso local
 ### Linux
 
 Passo 1: Clonar projeto
@@ -39,4 +34,33 @@ python manage.py runserver
 Passo 7: Acessar site
 ```bash
 http://127.0.0.1:8000/
+```
+# Documentação
+## Descrição
+```bash
+O trabalho trata-se de um catálogo online de camisetas, DVDs, Jogos e Livros com cadastro de usuários. Neste sistema o usuário pode adicionar um item, visualizar itens que outros usuários criaram e submeter um comentário na seção de detalhes de um determinado item. O usuário pode editar e excluir somente elementos criados por ele.
+```
+
+## Tecnologia
+```bash
+A tecnologia usada foi Django em sua versão 1.8.5. com a estrutura MTV (Model,Template, View). Em Django, Templante corresponde ao View e View, ao Controller na arquitetura MVC.
+```
+
+## Entidades (CRUD)
+```bash
+* __Usuário:__ nome, e-mail e senha;
+
+* __Camiseta:__ marca, tamanho, cor, tecido, preço, usuário;
+
+* __DVD:__ título, gênero, ano, duração, preço, usuário;
+
+* __Jogo:__ título, estúdio, distribuidor, gênero, ano, preço, usuário;
+
+* __Livro:__ : título, ano, editora, autor(a), número de páginas, formato, preço, usuário.
+```
+## Funcionalidades
+```bash
+* __Seção de Comentários:__ apenas um usuário logado pode comentar na página de detalhes de um determinado item;
+
+* __Pesquisa:__ qualquer pessoa pode pesquisar por determinado item na página de pesquisa.
 ```
