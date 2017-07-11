@@ -1,4 +1,6 @@
 # trabalhoweb2017_1
+- [Uso Local](#uso-local)
+- [Documentação](#documentação)
 
 #  Uso local
 ### Linux
