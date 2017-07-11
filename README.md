@@ -36,18 +36,14 @@ Passo 7: Acessar site
 http://127.0.0.1:8000/
 ```
 # Documentação
-
 ## Descrição  
-
 	O trabalho trata-se de um catálogo online de camisetas, DVDs, Jogos e Livros com cadastro de usuários. 
-	Neste sistema o usuário pode adicionar um item, visualizar itens que outros usuários criaram e submeter um comentário na seção de detalhes de um determinado item. 
+	Neste sistema o usuário pode adicionar um item, visualizar itens que outros usuários criaram e submeter 
+	um comentário na seção de detalhes de um determinado item. 
 	O usuário pode editar e excluir somente elementos criados por ele.
 
-
 ## Tecnologia  
-
-	A tecnologia usada foi Django em sua versão 1.8.5. com a estrutura MTV (Model,Template, View). 
-	Em Django, Templante corresponde ao View e View, ao Controller na arquitetura MVC.
+	Framework Django.
 
 ## Entidades (CRUD)
 * __Usuário:__ nome, e-mail e senha  
@@ -58,9 +54,17 @@ http://127.0.0.1:8000/
 
 * __Jogo:__ título, estúdio, distribuidor, gênero, ano, preço, usuário  
 
-* __Livro:__ : título, ano, editora, autor(a), número de páginas, formato, preço, usuário  
+* __Livro:__ título, ano, editora, autor(a), número de páginas, formato, preço, usuário  
 
 ## Funcionalidades
 * __Seção de Comentários:__ apenas um usuário logado pode comentar na página de detalhes de um determinado item  
 
 * __Pesquisa:__ qualquer pessoa pode pesquisar por determinado item na página de pesquisa  
+
+## Internacionalização
+* __Português Brasileiro__
+* __Inglês__
+
+## Estrutura
+	A estrutura usada para o projeto foi MTV (Model,Template, View).
+
